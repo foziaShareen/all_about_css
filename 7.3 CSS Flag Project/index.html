@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Flag Project</title>
+  <style>
+    /* Write your CSS Code here */
+   .flag{
+    width:900px;
+    height:600px;
+    background-color: red;
+    position: relative;
+    /* relative sey element move karta hai apnee default yl keh saktay hein apni purani position kay hisab say */
+    left: 50%;
+    top:300px;
+
+   }
+   
+  .flag > div {
+    background-color: blue;
+    width:100%;
+    height: 300px;
+    /* jab hem absolute kartay hein to wo element apney parent kay hisab say move karta ha
+    hum ziada ter parent ko relative of children ko absolute kar datain hain */
+     position:absolute;
+    top:150px;
+    
+    
+   }
+   .flag > div > div {
+    height:200px;
+    width:200px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    position: absolute;
+    top:50px;
+    left:300px;
+   }
+    p{
+      margin:0;
+    color: rgb(18, 18, 19);
+    text-align: center;
+    font-size: 60px;
+}
+.flag > p{
+  color: aliceblue;
+} 
+/* note if u want to use cheat code of css select the element 
+for example p in our case (elemnt selected in inspect in elemnts selection , and right click on html where p is)
+copy select copy then copy selector */
+/* body > div.flag > div > div > p */
+  </style>
+</head>
+
+<!-- 
+  IMPORTANT! Do not change any HTML
+Don't add any classes/ids/elements 
+Use what you know about combining selectors 
+and CSS specificity instead.
+Hint 1: The flag is 900px by 600px and the circle is 200px by 200px.
+Hint 2: You can use CSS inspection to get the colors from
+https://appbrewery.github.io/flag-of-laos/
+-->
+
+<body>
+  <div class="flag">
+    <p>The Flag</p>
+    <div>
+      <div>
+        <p>of Laos</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
